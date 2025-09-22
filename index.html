@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>?�이?�웃 ?�모</title>
+    <title>레이아웃</title>
   </head>
   <body class="text-gray-900">
-    <!-- 고정 ?�쪽 ?�비게이??-->
+    <!-- 고정 폭 fixed 네비바-->
     <aside
       class="fixed inset-y-0 left-0 w-72 border-r bg-white/95 backdrop-blur z-40"
     >
@@ -15,9 +15,9 @@
       <nav class="p-4 space-y-2"></nav>
     </aside>
 
-    <!-- 고정 ?�단 ?�목/?�명 -->
+    <!-- 고정 헤더 -->
     <header
-      class="fixed top-0 left-72 right-0 h-20 border-b bg-white/95 backdrop-blur z-30"
+      class="fixed top-0 left-72 right-0 h-25 border-b bg-white/95 backdrop-blur z-30"
     >
       <div class="h-full px-6 flex items-center">
         <div class="space-y-0.5">
@@ -27,9 +27,9 @@
       </div>
     </header>
 
-    <!-- 고정 검???�널 -->
+    <!-- 고정 검색 패널 -->
     <section
-      class="fixed top-20 left-72 right-0 h-24 border-b bg-white/95 backdrop-blur z-30"
+      class="fixed top-25 left-72 right-0 h-24 border-b bg-white/95 backdrop-blur z-30"
     >
       <div class="h-full px-6 flex items-center gap-3">
         <!-- 검???�력(?�?�어?�레?? -->
@@ -45,30 +45,32 @@
 
     <!-- 카드 메인 영역 -->
     <main class="ml-72 pt-44">
-      <!-- 컨텐�??�퍼: ?�체 ?�이?�서 고정?�역 ?�외?�고 ?�로 ?�크�?-->
-      <div class="h-[calc(100vh-176px)] overflow-y-auto">
+      <!-- 카드 무한 스크롤-->
+      <div class="h-[calc(100vh-196px)] overflow-y-auto px-6 py-6">
         <div class="px-6 py-6">
-          <!-- 카드 그리??(?��?) -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- 반복?�는 카드 ?�리 -->
-            <article class="h-40 rounded-xl border bg-white"></article>
-            <article class="h-40 rounded-xl border bg-white"></article>
-            <article class="h-40 rounded-xl border bg-white"></article>
-            <article class="h-40 rounded-xl border bg-white"></article>
-            <article class="h-40 rounded-xl border bg-white"></article>
-            <article class="h-40 rounded-xl border bg-white"></article>
-            <article class="h-40 rounded-xl border bg-white"></article>
-            <article class="h-40 rounded-xl border bg-white"></article>
-            <article class="h-40 rounded-xl border bg-white"></article>
+          <!-- 카드 그리드 목록-->
+          <div
+            class="grid gap-6 grid-cols-[repeat(auto-fit,_minmax(217px,_217px))] justify-center"
+          >
+            <!-- 카드-->
+            <article class="h-100 rounded-xl border bg-white"></article>
+            <article class="h-100 rounded-xl border bg-white"></article>
+            <article class="h-100 rounded-xl border bg-white"></article>
+            <article class="h-100 rounded-xl border bg-white"></article>
+            <article class="h-100 rounded-xl border bg-white"></article>
+            <article class="h-100 rounded-xl border bg-white"></article>
+            <article class="h-100 rounded-xl border bg-white"></article>
+            <article class="h-100 rounded-xl border bg-white"></article>
+            <article class="h-100 rounded-xl border bg-white"></article>
           </div>
 
-          <!-- 무한 ?�크�??��?�??�리 -->
+          <!-- 무한 스크롤 -->
           <div class="h-16"></div>
         </div>
       </div>
     </main>
 
-    <!-- (?�택) 모바???�?? ?��? ?�면?�서 ?�이?�바 ?�프캔버???�체용 ?�리 -->
+    <!-- (?�택) 모바???�?? ?��? ?�면?�서 ?�이?�바 ?�프캔버???�체???�리 -->
     <!-- ?�요 ??JS�??��? 추�? -->
   </body>
 </html>
